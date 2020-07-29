@@ -12,40 +12,9 @@
   font-weight: normal;
   font-style: normal; }
 
-@font-face {
-  font-family: SamsungOne400-kr;
-  src: url($SamsungOneKorean-400) format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: SamsungOne700-kr;
-  src: url($SamsungOneKorean-700) format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
 body {
   font-family: SamsungOne400, "Malgun Gothic", "맑은 고딕", "Microsoft Yahei", 微软雅黑, STXihei, "华文细黑", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "MS PGothic", "Apple SD Gothic Neo", "Apple SD 고딕 Neo", "AppleGothic", "Microsoft NeoGothic", "Droid sans", Dotum, 돋움, 굴림, arial, Helvetica, sans-serif; }
-  
-  [lang="kr"] {
-  font-family: SamsungOne400, SamsungOne400-kr; }
-  [lang="kr"] body {
-    font-family: SamsungOne400, SamsungOne400-kr; }
-  [lang="kr"] h1, [lang="kr"] .h1 {
-    font-family: SamsungOne700, SamsungOne700-kr; }
-  [lang="kr"] h2, [lang="kr"] .h2 {
-    font-family: SamsungOne700, SamsungOne700-kr; }
-  [lang="kr"] h3, [lang="kr"] .h3 {
-    font-family: SamsungOne700, SamsungOne700-kr; }
-  [lang="kr"] h4, [lang="kr"] .h4 {
-    font-family: SamsungOne700, SamsungOne700-kr; }
-  [lang="kr"] h5, [lang="kr"] .h5 {
-    font-family: SamsungOne700, SamsungOne700-kr; }
-  [lang="kr"] h6, [lang="kr"] .h6 {
-    font-family: SamsungOne700, SamsungOne700-kr; }
-  [lang="kr"] b, [lang="kr"] strong {
-    font-family: SamsungOne700, SamsungOne700-kr; }
-    
+
 // EHC - 2020-01-21
 .about-page .about.admins {
     display: none;
@@ -62,10 +31,11 @@ a:link, a:visited, a:active {
 a:hover {
   color: #1428A0; }
 
-.d-header { background-color: #000;}
-.ember-application .d-header {top:64px; height:36px; position:fixed; background-color: #fff;
+.d-header { background-color: #ff;}
+.ember-application .d-header {top:64px; height:36px; position:fixed; background-color: #000;
     .title {padding-right: 20px;
         a{
+            &:link, &:visited { color: #fff; }
             &:hover, &:focus, &:active{ color: #00b3e3;}
             &+a{display:none;}
         }
@@ -123,7 +93,7 @@ a:hover {
     background-position: center center;
     background-size: 100% auto;
     content: ''; }
-    
+
 @keyframes backdrop-fadein {
   0% {
     opacity: 0.0; }
@@ -135,7 +105,7 @@ a:hover {
     opacity: 0.7; }
   100% {
     opacity: 0.0; } }
-    
+
 @keyframes move-to-down {
   0% {
     transform: translateY(-100%); }
@@ -358,16 +328,16 @@ a:hover {
 	height: 64px;
 	z-index: 1001;
 	line-height: 1.625;
-	
+
 	* {box-sizing: border-box;}
-	
+
 	.btn{background: none; border: 1px solid transparent;
 	    &:hover, &:active, &:focus{background: none; outline: none;}
 	}
-	
+
 	ul{margin: 0;}
-	
-	
+
+
 	.bg-header {
 		height: 100%;
 		background: black;
@@ -471,7 +441,7 @@ a:hover {
                     left: 0;
                     top: 0;
                     transition: transform 0.15s ease-in-out;
-                    transform: scale(1); 
+                    transform: scale(1);
                 }
 				svg {
 					position: absolute;
@@ -956,7 +926,7 @@ a:hover {
 	}
 }
 
-                
+
 /********************************* HEADER END *****************************/
 
 /********************************* SEARCH START *****************************/
@@ -1530,7 +1500,7 @@ a:hover {
     .common-backdrop.full-backdrop {
       top: 0;
       height: 100vh; } }
-      
+
 body.fixed {
   position: fixed;
   width: 100%;
@@ -1540,7 +1510,7 @@ body.fixed {
 .sdp-search-form-wrap {
   width: 100%;
   height: 100%;
-  background: #fff; 
+  background: #fff;
     form{margin-bottom: 0;}
 }
   .sdp-search-form-wrap .sdp-search-field .sdp-input-group-search {
@@ -1680,9 +1650,9 @@ body.fixed {
 /********************************* FOOTER START *****************************/
 
 .sdp-footer {
-    
+
     *{box-sizing: border-box;}
-    
+
 	.inner-wrap {
 		background: #000;
 	}
@@ -1743,16 +1713,16 @@ body.fixed {
 				border-radius: 50%;
 				text-align: center;
 				color: #000;
-				
+
 				.d-icon-fab-facebook-f {font-size:19px;}
                 .d-icon-fab-instagram{font-size:22px;}
                 .d-icon-fab-twitter{font-size:18px;}
                 .d-icon-fab-youtube{font-size:20px;}
                 .d-icon-rss{font-size:18px;}
                 .d-icon-fab-linkedin-in{font-size:18px;}
-                  
+
                 &:hover {opacity: 1; }
-				
+
 			}
 		}
 		.copyright {
