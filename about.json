@@ -1,0 +1,40 @@
+{
+  "name": "Samsung Portal Theme",
+  "component": false,
+  "license_url": null,
+  "about_url": null,
+  "authors": null,
+  "theme_version": null,
+  "minimum_discourse_version": null,
+  "maximum_discourse_version": null,
+  "assets": {
+    "icon_close": "assets/icon_close.svg",
+    "icon_close_w": "assets/icon_close_w.svg",
+    "icon_close_white": "assets/icon_close_white.svg",
+    "icon_search_zoom": "assets/icon_search_zoom.svg",
+    "icon_search_zoom_black": "assets/icon_search_zoom_black.svg",
+    "logo_developers": "assets/logo_developers.svg",
+    "logo_developers_w": "assets/logo_developers_w.svg",
+    "SamsungOne-400": "assets/SamsungOne-400.woff",
+    "SamsungOne-700": "assets/SamsungOne-700.woff",
+    "SamsungOneKorean-400": "assets/SamsungOneKorean-400.woff",
+    "SamsungOneKorean-700": "assets/SamsungOneKorean-700.woff"
+  },
+  "color_schemes": {
+    "Samsung Portal": {
+      "primary": "363636",
+      "secondary": "ffffff",
+      "tertiary": "0077C8",
+      "quaternary": "00B3E3",
+      "header_background": "ffffff",
+      "header_primary": "333333",
+      "highlight": "FFB546",
+      "danger": "FF4337",
+      "success": "00B3E3",
+      "love": "FF4337"
+    }
+  },
+  "modifiers": {
+  },
+  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
+}
