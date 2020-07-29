@@ -1,5 +1,5 @@
 {
-  "name": "Samsung Portal Theme",
+  "name": "Samsung Portal Theme 2020",
   "component": false,
   "license_url": null,
   "about_url": null,
@@ -16,9 +16,7 @@
     "logo_developers": "assets/logo_developers.svg",
     "logo_developers_w": "assets/logo_developers_w.svg",
     "SamsungOne-400": "assets/SamsungOne-400.woff",
-    "SamsungOne-700": "assets/SamsungOne-700.woff",
-    "SamsungOneKorean-400": "assets/SamsungOneKorean-400.woff",
-    "SamsungOneKorean-700": "assets/SamsungOneKorean-700.woff"
+    "SamsungOne-700": "assets/SamsungOne-700.woff"
   },
   "color_schemes": {
     "Samsung Portal": {
