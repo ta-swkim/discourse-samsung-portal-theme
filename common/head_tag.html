@@ -8,7 +8,7 @@
         return helper.h(
             "a",
             {
-              title: 'Forum Home',
+              title: '<i class="fas fa-home"></i> Forum Home',
               href: '/',
               target: '_self',
               class: 'forum-home'
@@ -16,13 +16,13 @@
             'Forum Home'
         );
     });
-    
+
 </script>
 
 <script type="text/javascript">
 
     $(document).ready(function(){
-        $('.sdp-footer .year').replaceWith(new Date().getFullYear()); 
+        $('.sdp-footer .year').replaceWith(new Date().getFullYear());
     });
 
 /*=========================================================== [ Global Variables ] =======================================================================*/
@@ -53,7 +53,7 @@ if (typeof window.GlobalVars == 'undefined' || !window.GlobalVars) {
         OldScreenType: '',
         getScrollTop : 0,
         getFixedScrollTop : 0,
-        headerH : 64
+        headerH : 32
     }
 
 
@@ -474,7 +474,7 @@ $(document).ready(function(){
 
             if(!modalGlobalSearch.hasClass('show')){
                 $(this).focus();
-                  
+
                 if($('#toggle-mobile-gnb').hasClass('active')){
                     $('#toggle-mobile-gnb').click();
                 }
@@ -568,7 +568,7 @@ $(document).ready(function(){
     var UiComponentMain = (function () {
         var motionElList, commonBackdrop;
         var modalTriggerEl, targetModalEl;
-										
+
 
         var useBodyScroll;
 
@@ -699,7 +699,7 @@ $(document).ready(function(){
 
 
 /*=========================================================== [ header / Global Search ] =======================================================================*/
-																																								  
+
 (function (ns, $, undefined) {
     var TopGlobalSearch = (function () {
         var modalSearchGlobal, globalSearchForm, searchInputField, searchResultList;
@@ -734,7 +734,7 @@ $(document).ready(function(){
 			k = searchInputField.val();
             if(!!k && !!k.trim()){
                 window.location.href='https://developer.samsung.com/search?query='+ k.split(" ").join("+");
-            }																								   
+            }
         };
 
 
