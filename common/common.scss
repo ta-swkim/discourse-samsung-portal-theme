@@ -1823,7 +1823,16 @@ body.fixed {
 }
 
 .vertical-center {
-  padding: 20px;
+  padding: 10px;
   resize: vertical;
   overflow: auto;
+}
+
+#main-outlet {
+    padding-top: 4.3572em;
+}
+
+.banner-box .section-header .description p {
+    margin: auto;
+    max-width: 65ch;
 }
