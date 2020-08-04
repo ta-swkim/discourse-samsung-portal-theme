@@ -1817,21 +1817,25 @@ body.fixed {
 	}
 }
 
+// EHC resize the category logo to something smaller.
 .category-logo.aspect-image {
   --max-height: 72px;
   --max-width: 72px;
 }
 
+// EHC vertically center the category title next to the icon.
 .vertical-center {
-  padding: 10px;
+  padding: 5px;
   resize: vertical;
   overflow: auto;
 }
 
+// EHC Get rid of white bar between GNB and banner
 #main-outlet {
     padding-top: 4.3572em;
 }
 
+// EHC Make front page header text centered and line breaks.
 .banner-box .section-header .description p {
     margin: auto !important;
     max-width: 65ch;
