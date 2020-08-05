@@ -13,8 +13,7 @@
     "icon_close_white": "assets/icon_close_white.svg",
     "icon_search_zoom": "assets/icon_search_zoom.svg",
     "icon_search_zoom_black": "assets/icon_search_zoom_black.svg",
-    /* "logo_developers": "assets/logo_developers.svg", */
-    "logo_developers": "assets/logo_developers_yellow_triad.png",
+    "logo_developers": "assets/logo_developers.svg",
     "logo_developers_w": "assets/logo_developers_w.svg",
     "SamsungOne-400": "assets/SamsungOne-400.woff",
     "SamsungOne-700": "assets/SamsungOne-700.woff"
