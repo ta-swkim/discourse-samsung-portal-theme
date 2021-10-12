@@ -32,10 +32,10 @@ a:hover {
   color: #1428A0; }
 
 .d-header { background-color: #ffffff;}
-.ember-application .d-header {top:64px; height:36px; position:fixed; background-color: #000;
+.ember-application .d-header {top:64px; height:36px; position:fixed; background-color: #fff;
     .title {padding-right: 20px;
         a{
-            &:link, &:visited { color: #fff; }
+            &:link, &:visited { color: #363636; }
             &:hover, &:focus, &:active{ color: #00b3e3;}
             &+a{display:none;}
         }
