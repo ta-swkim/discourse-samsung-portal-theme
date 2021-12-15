@@ -5,112 +5,233 @@
             <div class="bg-header bg-header-cover"></div>
             <div class="navbar navbar-expand-md">
                 <div class="sdp-logo">
-                    <a class="link-logo" href="http://developer.samsung.com/" title="Samsung Developers">
-                        <span><i class="s-ico s-ico-logo"></i></span>
+                    <a class="link-logo" href="https://developer.samsung.com/" title="Samsung Developers">
+                        <span>
+                            <i class="s-ico s-ico-logo-w"></i>
+                        </span>
                     </a>
                 </div>
 
                 <button id="toggle-mobile-gnb" class="btn toggle-mobile-menu" type="button" data-toggle="collapse" aria-controls="mobile navbar collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-box"><i></i></span>
+                    <span class="icon-box">
+                        <i></i>
+                    </span>
                     <em class="sr-only">Toggle navigation</em>
                 </button>
 
-                <!-- mobile / global-Search-button -->
-                <button type="button" class="btn btn-global-search is-mobile" aria-haspopup="true" aria-expanded="false">
+                <a href="https://developer.samsung.com/search?query=" class="btn btn-global-search is-mobile" title="Search Samsung Developers">
                     <span class="sr-only">Global Search</span>
                     <span class="i-box">
-                        <i class="s-ico s-ico-schzoom"></i>
-                        {{d-icon 'times'}}
+                        <i class="s-ico s-ico-schzoom-black"></i>
+                        <i class="icon-close"><i></i></i>
                     </span>
-                </button>
+                </a>
 
                 <div class="hd-collapse navbar-collapse" id="global-nav-collapse">
                     <div id="nav-gnb" class="gnb main-nav">
                         <ul class="navbar-nav navbar-depth1">
                             <li class="nav-item">
-                                <button class="toggle-submenu none-child"></button>
+                                <button class="toggle-submenu"></button>
                                 <a class="nav-link depth1-link" href="https://developer.samsung.com/learn"><span>Learn</span></a>
-                                <div class="navbar-depth2-wrap" style="top: -276px;">
-                                    <ul class="navbar-nav navbar-depth2 sm-col-3">
-                                        <li class="nav-item"><a href="https://developer.samsung.com/codelab" class="nav-link depth2-link"><span>Code Lab</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/foldables-and-largescreens" class="nav-link depth2-link"><span>Foldables and Large Screens</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/one-ui-beta" class="nav-link depth2-link"><span>One UI Beta</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/developers-podcast" class="nav-link depth2-link"><span>Samsung Developers Podcasts</span></a></li>
+                                <div class="navbar-depth2-wrap">
+                                    <ul class="navbar-nav navbar-depth2 navbar-depth2-row">
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/codelab" class="nav-link depth2-link"><span>Code Lab</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/foldables-and-largescreens" class="nav-link depth2-link"><span>Foldables and Large Screens</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/one-ui-beta" class="nav-link depth2-link"><span>One UI Beta</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/developers-podcast" class="nav-link depth2-link"><span>Samsung Developers Podcasts</span></a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="nav-item">
                                 <button class="toggle-submenu"></button>
-                                <a class="nav-link depth1-link" href="http://developer.samsung.com/develop"><span>Develop</span></a>
-                                <div class="navbar-depth2-wrap" style="top: -276px;">
+                                <a class="nav-link depth1-link" href="https://developer.samsung.com/develop"><span>Develop</span></a>
+                                <div class="navbar-depth2-wrap">
                                     <ul class="navbar-nav navbar-depth2 sm-col-3">
-                                        <!-- <li class="nav-item"><a class="nav-link depth2-link no-link"><span>Mobile</span></a></li> -->
-                                        <li class="nav-item"><a href="https://developer.samsung.com/galaxy-gamedev" class="nav-link depth2-link"><span>Galaxy GameDev</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/galaxy-themes" class="nav-link depth2-link"><span>Galaxy Themes</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/galaxy-watch" class="nav-link depth2-link"><span>Galaxy Watch</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/health" class="nav-link depth2-link"><span>Health</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/smarttv/blockchain" class="nav-link depth2-link"><span>Samsung Blockchain</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/samsung-dex" class="nav-link depth2-link"><span>Samsung DeX</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/iap" class="nav-link depth2-link"><span>Samsung IAP</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/internet" class="nav-link depth2-link"><span>Samsung Internet</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/mobile" class="nav-link depth2-link"><span>View All</span></a></li>
-                                        <!-- <li class="nav-item"><a class="nav-link depth2-link no-link"><span>Consumer Electronics</span></a></li> -->
-                                        <li class="nav-item"><a href="https://developer.samsung.com/family-hub" class="nav-link depth2-link"><span>Family Hub</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/smarttv/develop" class="nav-link depth2-link"><span>Smart TV</span></a></li>
-                                        <!-- <li class="nav-item"><a class="nav-link depth2-link no-link"><span>Platform</span></a></li> -->
-                                        <li class="nav-item"><a href="https://developer.samsung.com/bixby" class="nav-link depth2-link"><span>Bixby</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/knox" class="nav-link depth2-link"><span>Knox</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/smartThings" class="nav-link depth2-link"><span>SmartThings</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/tizen" class="nav-link depth2-link"><span>Tizen.NET</span></a></li>
+                                        <li class="nav-item">
+                                            <a class="nav-link depth2-link depth2-header no-link"
+                                                ><span><span>Mobile</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/galaxy-gamedev" class="nav-link depth2-link depth2-clindren"
+                                                ><span><span>Galaxy GameDev</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/galaxy-themes" class="nav-link depth2-link depth2-clindren"
+                                                ><span><span>Galaxy Themes</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/galaxy-watch" class="nav-link depth2-link depth2-clindren"
+                                                ><span><span>Galaxy Watch</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/health" class="nav-link depth2-link depth2-clindren"
+                                                ><span><span>Health</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/blockchain" class="nav-link depth2-link depth2-clindren"
+                                                ><span><span>Samsung Blockchain</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/samsung-dex" class="nav-link depth2-link depth2-clindren"
+                                                ><span><span>Samsung DeX</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/iap" class="nav-link depth2-link depth2-clindren"
+                                                ><span><span>Samsung IAP</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/internet" class="nav-link depth2-link depth2-clindren"
+                                                ><span><span>Samsung Internet</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/mobile" class="nav-link depth2-link depth2-clindren nav-arrow"
+                                                ><span><span>View All</span></span></a
+                                            >
+                                        </li>
+                                    </ul>
+                                    <ul class="navbar-nav navbar-depth2 sm-col-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link depth2-link depth2-header no-link"
+                                                ><span><span>Consumer Electronics</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/family-hub" class="nav-link depth2-link depth2-clindren"
+                                                ><span><span>Family Hub</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/smarttv/develop" class="nav-link depth2-link depth2-clindren"
+                                                ><span><span>Smart TV</span></span></a
+                                            >
+                                        </li>
+                                    </ul>
+                                    <ul class="navbar-nav navbar-depth2 sm-col-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link depth2-link depth2-header no-link"
+                                                ><span><span>Platform</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/bixby" class="nav-link depth2-link depth2-clindren"
+                                                ><span><span>Bixby</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/knox" class="nav-link depth2-link depth2-clindren"
+                                                ><span><span>Knox</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/smartthings" class="nav-link depth2-link depth2-clindren"
+                                                ><span><span>SmartThings</span></span></a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/tizen" class="nav-link depth2-link depth2-clindren"
+                                                ><span><span>Tizen.NET</span></span></a
+                                            >
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="nav-item">
                                 <button class="toggle-submenu"></button>
                                 <a class="nav-link depth1-link" href="https://developer.samsung.com/design"><span>Design</span></a>
-                                <div class="navbar-depth2-wrap" style="top: -314px;">
-                                    <ul class="navbar-nav navbar-depth2 sm-col-1">
-                                        <li class="nav-item"><a href="https://developer.samsung.com/design-system" class="nav-link depth2-link"><span>Design System</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/oneui" class="nav-link depth2-link"><span>One UI</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/one-ui-watch" class="nav-link depth2-link"><span>One UI Watch</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/smarttv/design" class="nav-link depth2-link"><span>Smart TV</span></a></li>
+                                <div class="navbar-depth2-wrap">
+                                    <ul class="navbar-nav navbar-depth2 navbar-depth2-row">
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/design-system" class="nav-link depth2-link"><span>Design System</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/one-ui" class="nav-link depth2-link"><span>One UI</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/one-ui-watch" class="nav-link depth2-link"><span>One UI Watch</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/smarttv/design" class="nav-link depth2-link"><span>Smart TV</span></a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="nav-item">
                                 <button class="toggle-submenu"></button>
                                 <a class="nav-link depth1-link" href="https://developer.samsung.com/distribute"><span>Distribute</span></a>
-                                <div class="navbar-depth2-wrap" style="top: -274px;">
-                                    <ul class="navbar-nav navbar-depth2 sm-col-1">
-                                        <li class="nav-item"><a href="https://developer.samsung.com/galaxy-store" class="nav-link depth2-link"><span>Galaxy Store</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/galaxy-games" class="nav-link depth2-link"><span>Galaxy Store Games</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/podcasts" class="nav-link depth2-link"><span>Samsung Podcasts</span></a></li>
+                                <div class="navbar-depth2-wrap">
+                                    <ul class="navbar-nav navbar-depth2 navbar-depth2-row">
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/galaxy-store" class="nav-link depth2-link"><span>Galaxy Store</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/galaxy-games" class="nav-link depth2-link"><span>Galaxy Store Games</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/podcasts" class="nav-link depth2-link"><span>Samsung Podcasts</span></a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="nav-item">
                                 <button class="toggle-submenu"></button>
-                                <a class="nav-link depth1-link" href="https://developer.samsung.com/connect"><span>Support</span></a>
-                                <div class="navbar-depth2-wrap" style="top: -234px;">
-                                    <ul class="navbar-nav navbar-depth2 sm-col-1" style="width:300px;">
-                                        <li class="nav-item"><a href="https://developer.samsung.com/support" class="nav-link depth2-link"><span>Developer Support</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/remote-test-lab" class="nav-link depth2-link"><span>Remote Test Lab</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/issues-and-bugs" class="nav-link depth2-link"><span>Issues and Bugs Channel</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/sdp/android-usb-driver" class="nav-link depth2-link"><span>Samsung Android USB Driver</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/galaxy-emulator-skin" class="nav-link depth2-link" style="width:260px !important;"><span>Galaxy Emulator Skin</span></a></li>
+                                <a class="nav-link depth1-link" href="https://developer.samsung.com/support"><span>Support</span></a>
+                                <div class="navbar-depth2-wrap">
+                                    <ul class="navbar-nav navbar-depth2 navbar-depth2-row">
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/dev-support" class="nav-link depth2-link"><span>Developer Support</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/remote-test-lab" class="nav-link depth2-link"><span>Remote Test Lab</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/issues-and-bugs" class="nav-link depth2-link"><span>Issues and Bugs Channel</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/android-usb-driver" class="nav-link depth2-link"><span>Samsung Android USB Driver</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/galaxy-emulator-skin" class="nav-link depth2-link"><span>Galaxy Emulator Skin</span></a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="nav-item">
                                 <button class="toggle-submenu"></button>
-                                <a class="nav-link depth1-link" href="http://developer.samsung.com/connect"><span>Connect</span></a>
-                                <div class="navbar-depth2-wrap" style="top: -234px;">
-                                    <ul class="navbar-nav navbar-depth2 sm-col-1" style="width:300px;">
-                                        <li class="nav-item"><a href="https://developer.samsung.com/blog" class="nav-link depth2-link"><span>Blog</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/news" class="nav-link depth2-link"><span>News</span></a></li>
-                                        <li class="nav-item"><a href="https://forum.developer.samsung.com/" class="nav-link depth2-link"><span>Forums</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/events" class="nav-link depth2-link"><span>Events</span></a></li>
-                                        <li class="nav-item"><a href="https://developer.samsung.com/conference" class="nav-link depth2-link"><span>Samsung Developer Conference</span></a></li>
+                                <a class="nav-link depth1-link" href="https://developer.samsung.com/connect"><span>Connect</span></a>
+                                <div class="navbar-depth2-wrap">
+                                    <ul class="navbar-nav navbar-depth2 navbar-depth2-row">
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/blog" class="nav-link depth2-link"><span>Blog</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/news" class="nav-link depth2-link"><span>News</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://forum.developer.samsung.com" target="_blank" class="nav-link depth2-link"><span>Forums</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/events" class="nav-link depth2-link"><span>Events</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://developer.samsung.com/conference" class="nav-link depth2-link"><span>Samsung Developer Conference</span></a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
@@ -120,100 +241,207 @@
                     <div class="common-menu main-nav">
                         <ul class="navbar-nav navbar-depth1">
                             <li class="nav-item nav-item-search">
-                                <button type="button" class="btn btn-global-search" aria-haspopup="true" aria-expanded="false">
+                                 <a href="https://developer.samsung.com/search?query=" class="btn btn-global-search" title="Search Samsung Developers">
                                     <span class="sr-only">Global Search</span>
                                     <span class="i-box">
-                                        <i class="s-ico s-ico-schzoom"></i>
-                                        {{d-icon 'times'}}
+                                        <i class="s-ico s-ico-schzoom-black"></i>
+                                        <i class="icon-close"><i></i></i>
                                     </span>
-                                </button>
+                                </a>
                             </li>
 
-                                <!-- before login -->
-                                <li class="nav-item" id="sdp-signin-link">
-                                    <button class="toggle-submenu none-child"></button>
-                                    <a class="nav-link depth1-link" href="/login">Sign-In</a>
-                                </li>
+
+
+                            <li class="nav-item" id="sdp-signin-link">
+                                <button class="toggle-submenu"></button>
+                                <a class="nav-link depth1-link" href="https://developer.samsung.com/login"><span>Sign In</span></a>
+                            </li>
 
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
-
-        <!-- Global Search  -->
-        <div id="modal-global-top-search" class="common-modal modal-global-top-search" tabindex="-1" aria-labelledby="modal-search-collapse">
-            <div class="inner-modal">
-                <!-- close Button -->
-                <button type="button" class="btn btn-close-modal" data-dismiss="modal" aria-label="Close">
-                    <span class="i-box">
-                        <i class="icon-close"><i></i></i>
-                    </span>
-                </button>
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="sdp-search-form-wrap">
-                            <form id="global-sdp-search-form" method="GET" action="https://developer.samsung.com/search">
-                                <fieldset class="sdp-search-field">
-                                    <legend class="sr-only">Top Global Search Form</legend>
-
-                                    <div class="input-group sdp-input-group-search">
-                                        <label for="global-sdp-form-search-field" class="sr-only">Search</label>
-                                        <input name="query" id="global-sdp-form-search-field" class="form-control" type="text" aria-label="search..." placeholder="Search" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="true" aria-owns="quick search form">
-
-                                        <button type="submit" class="btn btn-submit" aria-label="search" title="search">
-                                            <span class="sr-only">Submit</span>
-                                            <span class="prepend-icon"><i class="s-ico s-ico-schzoom-black"></i></span>
-                                        </button>
-                                    </div>
-                                </fieldset>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 </header>
 </script>
 
 <script type="text/x-handlebars" data-template-name="/connectors/below-footer/custom-footer">
 {{#if showFooter}}
-    <footer class="sdp-footer">
-        <div class="inner-wrap">
-            <div class="content">
-                <ul class="nav ft-menu-list">
-                    <li class="menu-item active">
-                        <a class="item-link" href="http://developer.samsung.com/terms"><span>Terms</span></a>
-                    </li>
-                    <li class="menu-item">
-                        <a class="item-link" href="http://developer.samsung.com/privacy"><span>Privacy</span></a>
-                    </li>
-                    <li class="menu-item">
-                        <a class="item-link" href="https://developer.samsung.com/open-source"><span>Open Source</span></a>
-                    </li>
-                    <li class="menu-item">
-                        <a class="item-link" href="http://developer.samsung.com/system-status"><span>System status</span></a>
-                    </li>
-                    <li class="menu-item">
-                        <a class="item-link" href="http://developer.samsung.com/sitemap"><span>Site map</span></a>
-                    </li>
-                </ul>
+	<footer class="sdp-footer">
+		<div class="inner-wrap">
+			<div class="sdp-sitemap">
+				<div class="sdp-ft-wrap doc-d-none">
+					<a class="navbar-brand" href="https://developer.samsung.com/">Samsung Developers</a>
+				</div>
+				<div class="sdp-ft-wrap">
+					<div class="ft-header">
+						<span>Quick Link</span>
+						<button class="toggle-submenu"></button>
+					</div>
+					<div class="ft-depth2-wrap">
+						<div class="ft-depth2-inner">
+							<ul class="nav ft-menu-list">
+								<li class="menu-item">
+									<a class="item-link" href="https://developer.samsung.com/android-usb-driver"><span>Android USB Driver</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="https://developer.samsung.com/codelab"><span>Code Lab</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="https://developer.samsung.com/galaxy-emulator-skin"><span>Galaxy Emulator Skin</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="https://developer.samsung.com/foldables-and-largescreens"><span>Foldables and Large Screens</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="https://developer.samsung.com/one-ui-beta"><span>One UI Beta</span></a>
+								</li>
+							</ul>
+							<ul class="nav ft-menu-list">
+								<li class="menu-item">
+									<a class="item-link" href="https://developer.samsung.com/remote-test-lab"><span>Remote Test Lab</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="https://developer.samsung.com/developers-podcast"><span>Samsung Developers Podcast</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="sdp-ft-wrap">
+					<div class="ft-header">
+						<span>Family Site</span>
+						<button class="toggle-submenu"></button>
+					</div>
+					<div class="ft-depth2-wrap">
+						<div class="ft-depth2-inner">
+							<ul class="nav ft-menu-list">
+								<li class="menu-item">
+									<a class="item-link" target="_blank" href="	https://bixbydevelopers.com"><span>Bixby</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" target="_blank" href="https://developer.samsungknox.com"><span>Knox</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" target="_blank" href="https://pay.samsung.com/developers"><span>Samsung Pay</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" target="_blank" href="https://smartthings.developer.samsung.com"><span>SmartThings</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" target="_blank" href="https://docs.tizen.org"><span>Tizen</span></a>
+								</li>
+							</ul>
+							<ul class="nav ft-menu-list">
+								<li class="menu-item">
+									<a class="item-link" target="_blank" href="http://www.oceanbrasil.com"><span>Samsung Dev Brazil</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" target="_blank" href="https://www.europe-samsung.com/smsdev/Home/Index"><span>Samsung Dev Spain</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
-                <ul class="nav ft-sns-list">
-                    <li class="menu-item"><a class="item-link" href="https://www.facebook.com/samsungdev" target="_blank">{{d-icon 'fab-facebook-f'}}</a></li>
-                    <li class="menu-item"><a class="item-link" href="https://instagram.com/samsung_dev" target="_blank">{{d-icon 'fab-instagram'}}</a></li>
-                    <li class="menu-item"><a class="item-link" href="https://twitter.com/samsung_dev" target="_blank">{{d-icon 'fab-twitter'}}</a></li>
-                    <li class="menu-item"><a class="item-link" href="https://www.youtube.com/samsungdevelopers" target="_blank">{{d-icon 'fab-youtube'}}</a></li>
-                    <li class="menu-item"><a class="item-link" href="https://samsungdev.buzzsprout.com" target="_blank"><img src="https://developer.samsung.com/img/common/icon_gui/icon_buzzsprout.svg" /></a></li>
-                    <li class="menu-item"><a class="item-link" href="https://developer.samsung.com/feed" target="_blank">{{d-icon 'rss'}}</a></li>
-                    <li class="menu-item"><a class="item-link" href="https://www.linkedin.com/company/samsungdevelopers" target="_blank">{{d-icon 'fab-linkedin-in'}}</a></li>
-                </ul>
+				<div class="sdp-ft-wrap sdp-ft-wrap-w-half">
+					<div class="ft-header">
+						<span>Legal</span>
+						<button class="toggle-submenu"></button>
+					</div>
+					<div class="ft-depth2-wrap">
+						<div class="ft-depth2-inner">
+							<ul class="nav ft-menu-list">
+								<li class="menu-item">
+									<a class="item-link" href="https://developer.samsung.com/terms"><span>Terms</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="https://developer.samsung.com/privacy"><span>Privacy</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="https://developer.samsung.com/open-source"><span>Open Source</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="sdp-ft-wrap li-mobile">
+					<div class="ft-header">
+						<span>Social Communications </span>
+						<button class="toggle-submenu"></button>
+					</div>
+					<div class="ft-depth2-wrap">
+						<div class="ft-depth2-inner">
+							<ul class="nav ft-menu-list">
+								<li class="menu-item">
+									<a class="item-link" href="https://www.facebook.com/samsungdev"><span>Facebook</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="https://instagram.com/samsung_dev"><span>Instagram</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="https://twitter.com/samsung_dev"><span>Twitter</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="https://www.youtube.com/samsungdevelopers"><span>YouTube</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="https://samsungdev.buzzsprout.com"><span>Buzzsprout</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="https://developer.samsung.com/feed"><span>Rss</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="https://www.linkedin.com/company/samsungdevelopers"><span>Linkedin</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
-                <p class="copyright">Copyright &copy; <span class="year"></span> SAMSUNG All rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+				<div class="sdp-ft-wrap sdp-ft-wrap-w-half">
+					<div class="ft-header">
+						<span></span>
+						<button class="toggle-submenu"></button>
+					</div>
+					<div class="ft-depth2-wrap">
+						<div class="ft-depth2-inner">
+							<ul class="nav ft-menu-list system-list">
+								<li class="menu-item">
+									<a class="item-link" href="https://developer.samsung.com/system-status"><span>System Status</span></a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="https://developer.samsung.com/sitemap"><span>Site Map</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+
+				<ul class="nav ft-menu-list system-list">
+					<li class="menu-item">
+						<a class="item-link" href="https://developer.samsung.com/system-status"><span>System Status</span></a>
+					</li>
+					<li class="menu-item">
+						<a class="item-link" href="https://developer.samsung.com/sitemap"><span>Site Map</span></a>
+					</li>
+				</ul>
+				<ul class="nav ft-sns-list">
+					<li class="menu-item"><a class="item-link" href="https://www.facebook.com/samsungdev" target="_blank">{{d-icon 'fab-facebook-f'}}<span class="sr-only">facebook</span></a></li>
+					<li class="menu-item"><a class="item-link" href="https://instagram.com/samsung_dev" target="_blank">{{d-icon 'fab-instagram'}}<span class="sr-only">instagram</span></a></li>
+					<li class="menu-item"><a class="item-link" href="https://twitter.com/samsung_dev" target="_blank">{{d-icon 'fab-twitter'}}<span class="sr-only">twitter</span></a></li>
+					<li class="menu-item"><a class="item-link" href="https://www.youtube.com/samsungdevelopers" target="_blank">{{d-icon 'fab-youtube'}}<span class="sr-only">youtube</span></a></li>
+					<li class="menu-item"><a class="item-link" href="https://samsungdev.buzzsprout.com" target="_blank"><i class="s-ico s-ico-buzzsprout"></i><span class="sr-only">buzzsprout</span></a></li>
+					<li class="menu-item"><a class="item-link" href="https://developer.samsung.com/feed" target="_blank">{{d-icon 'rss'}}<span class="sr-only">rss</span></a></li>
+					<li class="menu-item"><a class="item-link" href="https://www.linkedin.com/company/samsungdevelopers" target="_blank">{{d-icon 'fab-linkedin-in'}}<span class="sr-only">linkedin</span></a>
+					</li>
+				</ul>
+				<p class="copyright">Copyright &copy; <span class="year"></span> SAMSUNG. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
     {{/if}}
 </script>
