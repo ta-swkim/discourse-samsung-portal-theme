@@ -1,6 +1,6 @@
 <meta name="google-site-verification" content="fab7CHFKJlumAepIs8ztUQ0bmHHOIKCfWWM0zWV-xrM" />
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
 <script type="text/discourse-plugin" version="0.8">
     //api.changeWidgetSetting('home-logo', 'href', 'http://developer.samsung.com');
@@ -76,7 +76,6 @@ if (typeof window.SdpApp == 'undefined' || !window.SdpApp) {
     window.SdpApp = {};
     SdpApp.utils = {};
     SdpApp.ui = {};
-    SdpApp.search = {}
 }
 
 
@@ -88,8 +87,9 @@ if (typeof window.SdpApp == 'undefined' || !window.SdpApp) {
             // for App
             SdpApp.top_nav.init();
 
-            SdpApp.ui.main.init();
-            SdpApp.search.main.init();
+			SdpApp.footer.init();
+
+            //SdpApp.ui.main.init();
 
             SdpApp.utils.main.init();
 
@@ -253,7 +253,7 @@ $(document).ready(function(){
 /*=========================================================== [ Header ] =======================================================================*/
 (function (ns, $, undefined) {
     var TopNav = (function () {
-        var header, btnToggleGlobalSearch, modalGlobalSearch;
+        var header;
 
         var globalNavBox, toggleMobileGnb, global_common_1Depth,
             global_common_nav, global_common_1Depth_mobileToggle, global_common_1DepthLinkItem, global_common_2Depth, commonOhtersMenu;
@@ -263,7 +263,6 @@ $(document).ready(function(){
 
         var _init = function(){
             _setDomElements();
-            _addEvent();
 
             _check1DepthSubMenu();
             _onChangeDeviceSizeHandler();
@@ -284,9 +283,6 @@ $(document).ready(function(){
             global_common_2Depth = globalNavBox.find('.navbar-depth2-wrap');
             commonOhtersMenu = global_common_1Depth.find('> .nav-item').children().not('.depth1-link, .navbar-depth2-wrap');
             toggleMobileGnb = $('#toggle-mobile-gnb');
-
-            btnToggleGlobalSearch = header.find('.btn-global-search');
-            modalGlobalSearch = $('#modal-global-top-search');
         };
 
         var _onChangeDeviceSizeHandler = function() {
@@ -310,17 +306,6 @@ $(document).ready(function(){
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// Event
-
-        var _addEvent = function(){
-
-            btnToggleGlobalSearch.on({
-                click: _onClickToggleGlobalSearch
-            });
-            modalGlobalSearch.find('.btn-close-modal').on({
-                click: _onClickToggleGlobalSearch
-            });
-
-        };
 
 
         var _addEvent_gnb_DeskTop = function() {
@@ -405,31 +390,33 @@ $(document).ready(function(){
         }
 
         var _onClick_1DepthLinkItemHandler = function(e){
-            if(isMobileScreen){
+            if (isMobileScreen){
                 global_common_nav.find('.toggle-submenu').not($(this))
                     .removeClass('show')
                     .parent().children('.navbar-depth2-wrap').stop().animate({
-                    height: 0
-                },200);
+                        height: 0
+                    },200);
 
-                if(!$(this).hasClass('show')){
+                if (!$(this).hasClass('show')){
                     $(this).addClass('show');
                     isOpened2depth = true;
 
-                    var h = $(this).parent().find('.navbar-depth2-wrap ul').height() + 46;
+                    var h = 0;
+                    $(this).parent().find('.navbar-depth2-wrap ul').each((_, x) => {
+                        h += $(x).height();
+                    });
                     $(this).parent().children('.navbar-depth2-wrap').stop().animate({
                         height: h
                     },300);
-                }else{
+                } else {
                     $(this).removeClass('show');
                     isOpened2depth = false;
 
                     $(this).parent().children('.navbar-depth2-wrap').stop().animate({
                         height: 0
                     },200);
-                };
+                }
             }
-
         };
 
         var _onMouseOver_1DepthLinkItemHandler = function () {
@@ -467,52 +454,6 @@ $(document).ready(function(){
                 global_common_1Depth_mobileToggle.parent().find('.navbar-depth2-wrap').removeAttr('style');
             }
         };
-
-        // toggle Search Modal
-        var _onClickToggleGlobalSearch = function(e){
-            e.preventDefault();
-
-            if(!modalGlobalSearch.hasClass('show')){
-                $(this).focus();
-
-                if($('#toggle-mobile-gnb').hasClass('active')){
-                    $('#toggle-mobile-gnb').click();
-                }
-                modalGlobalSearch.off("animationend webkitAnimationEnd oAnimationEnd oAnimationEnd MSAnimationEnd");
-                modalGlobalSearch.one("animationend webkitAnimationEnd oAnimationEnd oAnimationEnd MSAnimationEnd", function(){
-                    modalGlobalSearch.off("animationend webkitAnimationEnd oAnimationEnd oAnimationEnd MSAnimationEnd");
-                    modalGlobalSearch.find('input').focus();
-
-                });
-
-                SdpApp.ui.main.check_current_active_modal(modalGlobalSearch);
-                header.css('z-index', 'auto');
-                // header.find('.gnb .depth1-link').off("animationend webkitAnimationEnd oAnimationEnd oAnimationEnd MSAnimationEnd");
-                header.find('.gnb').addClass('hide');
-
-                modalGlobalSearch.addClass('show');
-                SdpApp.ui.main.show_backdrop($(this), null, 'fluid');
-                //SdpApp.ui.main.show_backdrop($(this));
-
-                SdpApp.search.top_global_search.shown_modal();
-                btnToggleGlobalSearch.addClass('active');
-            }else{
-                modalGlobalSearch.one("animationend webkitAnimationEnd oAnimationEnd oAnimationEnd MSAnimationEnd", function(){
-                    modalGlobalSearch.off("animationend webkitAnimationEnd oAnimationEnd oAnimationEnd MSAnimationEnd");
-                    modalGlobalSearch.find('.inner-scroll').scrollTop(0);
-                    modalGlobalSearch.removeClass('show hide');
-                    header.css('z-index', '');
-                    header.find('.gnb').removeClass('hide');
-                });
-
-                modalGlobalSearch.addClass('hide');
-                SdpApp.ui.main.hide_backdrop();
-
-                SdpApp.search.top_global_search.close_search_modal();
-                btnToggleGlobalSearch.removeClass('active');
-            }
-        };
-
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// initial Style
@@ -562,9 +503,68 @@ $(document).ready(function(){
 
 }(SdpApp || {}, jQuery));
 
+/*=========================================================== [ Footer ] =======================================================================*/
+(function (ns, $, undefined) {
+    var Footer = (function () {
+        var _init = function(){
+
+            $(window.GlobalEvent).on(window.GlobalEvent.CHANGE_DEVICE_SIZE, function () {
+
+                if(window.GlobalVars.CurrentScreenType === window.GlobalVars.DeviceType.DESKTOP) {
+                    // var coll = $('.sdp-footer .ft-header button');
+                    // var i;
+                    // for (i = 0; i < coll.length; i++) {
+                    //     var h = 0;
+
+                    //     var inners = $(coll[i]).parent().next().find('.ft-depth2-inner');
+                    //     inners.each((_, x) => {
+                    //         h += $(x).height();
+                    //     });
+
+                    //     $(coll[i]).parent().next().css({height: h});
+                    // }
+                }else {
+                    // var coll = $('.sdp-footer .ft-header button');
+                    // var i;
+                    // for (i = 0; i < coll.length; i++) {
+                    //     $(coll[i]).removeClass('show');
+                    //     $(coll[i]).parent().next().css({height: 0})
+                    // }
+                }
+            });
+            var coll = $('.sdp-footer .ft-header button');
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                // $(coll[i]).parent().next().css({height: 0})
+                $(coll[i]).removeClass('show');
+                $(coll[i]).click(function () {
+                    if(!$(this).hasClass('show')){
+                        $(this).addClass('show');
+                        var h = $(this).parent().next().find('.ft-depth2-inner').height();
+                        $(this).parent().next().stop().animate({height: h}, 200);
+
+                    } else {
+                        $(this).removeClass('show');
+                        $(this).parent().next().stop().animate({height: 0}, 200);
+                    }
+                });
+            }
+        };
+        return {
+            init: _init,
+        }
+
+    })();
+
+    ns.footer = Footer;
+
+}(SdpApp || {}, jQuery));
+
+
 
 /*=========================================================== [ Component UI Main ] =======================================================================*/
-(function (ns, $, undefined) {
+/*(function (ns, $, undefined) {
     var UiComponentMain = (function () {
         var motionElList, commonBackdrop;
         var modalTriggerEl, targetModalEl;
@@ -695,165 +695,7 @@ $(document).ready(function(){
 
     ns.ui.main = UiComponentMain;
 
-}(window.SdpApp || {}, jQuery));
-
-
-/*=========================================================== [ header / Global Search ] =======================================================================*/
-
-(function (ns, $, undefined) {
-    var TopGlobalSearch = (function () {
-        var modalSearchGlobal, globalSearchForm, searchInputField, searchResultList;
-        var _init = function(){
-            //console.log('Global Search Form init!')
-            _setDomElements();
-            _addEvent();
-
-            // _initSearchFormData();
-        };
-
-        var _setDomElements = function () {
-            modalSearchGlobal = $('#modal-global-top-search');
-            globalSearchForm = $('#global-sdp-search-form');
-            searchInputField = $('#global-sdp-form-search-field');
-            searchResultList = modalSearchGlobal.find('.inner-result-sec');
-        };
-
-        var _addEvent = function(){
-            globalSearchForm.on({
-                submit: _onSubmitSearchHandler
-            })
-        };
-
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// Event Handler
-
-        var _onSubmitSearchHandler = function(e){
-            // todo submit logic 처리
-            e.preventDefault();
-            var k = '';
-			k = searchInputField.val();
-            if(!!k && !!k.trim()){
-                window.location.href='https://developer.samsung.com/search?query='+ k.split(" ").join("+");
-            }
-        };
-
-
-        var _completeShownSearchModal = function(){
-            searchInputField.focus();
-            // todo 검색 레이어가 활성되었을 때 Callback 작성
-            //console.log('헤더 쪽 검색 모달을 열었을 때 로직 실행')
-        };
-
-        var _closeSearchModal = function(){
-            //console.log('헤더 쪽 검색 모달을 닫힐 때')
-            // _initSearchFormData();
-        };
-
-        var _initSearchFormData = function(){
-            searchInputField.val('');
-            //searchResultList.empty();
-        };
-
-        return {
-            init: _init,
-            shown_modal: _completeShownSearchModal,
-            close_search_modal: _closeSearchModal
-        };
-
-    })();
-
-    ns.search.top_global_search = TopGlobalSearch;
-
-}(SdpApp || {}, jQuery));
-
-/*========================================== [ Search page Module ] ==========================================*/
-(function (ns, $, undefined) {
-    var SearchMain = (function () {
-        var mainSearchModalWrap, modalSearchMain, mainSearchForm, searchInputField, searchResultList;
-        var _init = function(){
-            //var currentSearchPage = SdpApp.utils.main.checkPageType('sdp-ly-search');
-            var currentSearchPage = false;
-            if(currentSearchPage){
-                //console.log('Search Main 컴포넌트 Init!')
-                _setDomElements();
-                _addEvent();
-            }
-
-            SdpApp.search.top_global_search.init();
-        }
-
-        var _setDomElements = function () {
-            mainSearchModalWrap = $('#el-main-search-form-wrap');
-            modalSearchMain = $('#modal-search-main');
-            mainSearchForm = $('#main-sdp-search-form');
-            searchInputField = $('#main-sdp-form-search-field');
-            searchResultList = modalSearchMain.find('.inner-result-sec');
-        };
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// Event
-        var _addEvent = function(){
-            searchInputField.on({
-                focusin: _onFocusInSearchFieldHandler
-            });
-
-            mainSearchForm.on({
-                submit: _onSubmitSearchHandler
-            })
-
-        }
-
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// Event Handler
-        var _onFocusInSearchFieldHandler = function(){
-            if(mainSearchModalWrap.hasClass('static')){
-                mainSearchModalWrap.removeClass('static');
-                modalSearchMain.addClass('show');
-                searchInputField.focus();
-                SdpApp.ui.main.show_backdrop(_closeSearchModal);
-                _completeShownSearchModal();
-            }
-        }
-
-        var _onSubmitSearchHandler = function(e){
-            e.preventDefault();
-
-            // todo submit logic 처리 후 호출!
-            _onCompletedSubmit();
-        }
-
-        var _onCompletedSubmit = function(){
-            _closeSearchModal();
-            SdpApp.ui.main.hide_backdrop();
-            searchInputField.blur();
-            //console.log('검색 페이지에서 Submit 완료')
-        }
-
-        var _completeShownSearchModal = function(){
-            //console.log('검색 페이지에서 검색 모달이 열렸을 때 로직 실행')
-        }
-
-        var _closeSearchModal = function(){
-            //console.log('검색 페이지에서 검색 모달이 닫힐 때')
-            mainSearchModalWrap.addClass('static');
-            modalSearchMain.removeClass('show');
-            _initSearchFormData();
-        }
-
-        var _initSearchFormData = function(){
-            //searchResultList.empty();
-        }
-
-        return {
-            init: _init,
-            close_search_modal: _closeSearchModal,
-        }
-
-    })();
-
-    ns.search.main = SearchMain;
-
-}(SdpApp || {}, jQuery));
+}(window.SdpApp || {}, jQuery));*/
 
 </script>
 

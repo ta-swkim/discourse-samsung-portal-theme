@@ -1,5 +1,5 @@
 {
-  "name": "Samsung Portal Theme 2021",
+  "name": "Samsung Portal Theme Renewal 2021",
   "component": false,
   "license_url": null,
   "about_url": null,
@@ -13,12 +13,14 @@
     "icon_close_white": "assets/icon_close_white.svg",
     "icon_search_zoom": "assets/icon_search_zoom.svg",
     "icon_search_zoom_black": "assets/icon_search_zoom_black.svg",
-    "logo_developers": "assets/logo_developers.svg",
-    "logo_developers_w": "assets/logo_developers_w.svg",
-    "logo_developers_2021": "assets/logo_developers_w_new2.png",
-    "logo_developers_w_2021": "assets/logo_developers_w_new2.png",
+	"icon_buzzsprout": "assets/icon_buzzsprout.svg",
+    "logo_developers_2021": "assets/logo_developers_w_new2.svg",
     "SamsungOne-400": "assets/SamsungOne-400.woff",
-    "SamsungOne-700": "assets/SamsungOne-700.woff"
+    "SamsungOne-700": "assets/SamsungOne-700.woff",
+    "SamsungSharpSans-Bold-woff2": "assets/SamsungSharpSans-Bold.woff2",
+    "SamsungSharpSans-Bold-woff": "assets/SamsungSharpSans-Bold.woff",
+    "SamsungSharpSans-Medium-woff2": "assets/SamsungSharpSans-Medium.woff2",
+    "SamsungSharpSans-Medium-woff": "assets/SamsungSharpSans-Medium.woff"
   },
   "color_schemes": {
     "Samsung Portal": {

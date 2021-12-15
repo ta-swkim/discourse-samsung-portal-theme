@@ -1,6 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <rect class="a" width="24" height="24" style="opacity:0;" />
-    <path class="b"
-          d="M922,459.172a5.992,5.992,0,0,1,4.886,9.472l5.649,5.649a1,1,0,1,1-1.414,1.414l-5.649-5.649A6,6,0,1,1,922,459.172Zm0,10a4,4,0,1,0-4-4A4.005,4.005,0,0,0,922,469.172Z"
-          transform="translate(-912.828 -456)" fill="#000" />
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+    <g fill="none" fill-rule="evenodd">
+        <g stroke="#363636" stroke-width="8">
+            <g>
+                <path d="M81 81L54.749 54.58M65 32.5C65 50.449 50.449 65 32.5 65 14.551 65 0 50.449 0 32.5 0 14.551 14.551 0 32.5 0 50.449 0 65 14.551 65 32.5z" transform="translate(7.500000, 7.500000)"/>
+            </g>
+        </g>
+    </g>
 </svg>
